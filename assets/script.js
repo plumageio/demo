@@ -22,6 +22,7 @@ triggerLocation.addEventListener('click', function (e) {
 
     screenLocation.style.transform = 'translate3d(-100%,0,0)'
     screenStyle.style.opacity = 0
+    window.scrollTo(0,0)
 }, false)
 
 triggerArtists.addEventListener('click', function (e) {
@@ -29,4 +30,5 @@ triggerArtists.addEventListener('click', function (e) {
 
     screenArtists.style.transform = 'translate3d(-200%,0,0)'
     screenLocation.style.opacity = 0
+    window.scrollTo(0, 0)
 }, false)
