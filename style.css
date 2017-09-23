@@ -12,7 +12,7 @@ body {
 }
 
 html {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 body {
@@ -28,6 +28,19 @@ a {
 
 h1, h2, h3, h4, h5 {
     color: var(--brand-dark);
+    font-weight: 600;
+}
+
+.header {
+    border-bottom: .15rem solid var(--brand-green);
+    color: var(--brand-dark);
+    position: fixed;
+    width: 100%;
+    background: #fff;
+}
+
+.header .row {
+    padding: 1rem;
 }
 
 .screens {
@@ -37,19 +50,43 @@ h1, h2, h3, h4, h5 {
 
 .screen {
     flex: 0 0 100%;
+    padding-top: 3.5rem;
 }
 
 .row {
-    max-width: 40rem;
+    max-width: 50rem;
     margin: auto;
     padding: 3rem 1rem;
 }
 
 .grid {
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.header {
+.grid__col {
+    flex: 0 0 47%;
+    margin-bottom: 2%;
+}
+
+    .grid--artists .grid__col {
+        flex: 0 0 100%;
+        margin-bottom: 9%;
+    }
+
+@media (min-width: 600px) {
+    .grid__col {
+        flex: 0 0 32%;
+    }
+
+    .grid--artists .grid__col {
+        flex: 0 0 47%;
+        margin-bottom: 6%;
+    }
+}
+
+.screen__header {
     margin-bottom: 3rem;
 }
 
@@ -63,4 +100,136 @@ h1, h2, h3, h4, h5 {
     margin-top: .5rem;
     margin-bottom: 0;
     color: var(--brand-grey);
+}
+
+.tile {
+    color: var(--brand-grey);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 10rem;
+    outline: 4px solid transparent;
+    display: flex;
+}
+
+    .tile.active {
+        animation: selectTile .15s ease-out;
+        outline-color: var(--brand-purple);
+    }
+
+.tile--blackwork { background-image: url('img/blackwork.png'); }
+.tile--graphic { background-image: url('img/graphic.jpg'); }
+.tile--traditional { background-image: url('img/traditional.jpg'); }
+.tile--neotraditional { background-image: url('img/neotraditional.jpg'); }
+.tile--realistic { background-image: url('img/realistic.png'); }
+.tile--oriental { background-image: url('img/oriental.jpg'); }
+.tile--polynesian { background-image: url(''); }
+.tile--watercolor { background-image: url('img/watercolor.png'); }
+
+.tile--berlin { background-image: url('img/berlin.jpg'); }
+.tile--london { background-image: url('img/london.jpg'); }
+.tile--paris { background-image: url('img/paris.jpg'); }
+.tile--rome { background-image: url('img/rome.jpg'); }
+
+.tile__title {
+    font-size: 1rem;
+    margin: 0;
+    color: #fff;
+    padding: .5rem 1rem;
+    background: rgba(0, 0, 0, .5);
+    align-self: flex-end;
+    width: 100%;
+}
+
+    .active .tile__title {
+        background: var(--brand-purple);
+    }
+
+@keyframes selectTile {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.actions {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.button {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: .15rem solid var(--brand-green);
+    user-select: none;
+    padding: .75rem 3rem;
+    font-size: 1rem;
+    line-height: 1;
+    border-radius: .15rem;
+    color: var(--brand-green);
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: transparent
+}
+
+.artist {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.artist__content {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 12rem;
+}
+
+.artist__meta {
+    padding: 1rem;
+    background: rgba(0, 0, 0, .5);
+}
+
+.artist__name {
+    margin: 0;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.artist__price {
+    float: right;
+}
+
+    .artist__price span {
+        font-size: .9rem;
+        opacity: .5;
+    }
+
+.artist__styles {
+    opacity: .75;
+}
+
+.artist--mirja .artist__content {
+    background-image: url('img/mirja-fenris.jpg');
+}
+
+.artist--lus .artist__content {
+    background-image: url('img/lus-lips.jpg');
+}
+
+.artist--jondix .artist__content {
+    background-image: url('img/jondix.jpg');
+}
+
+.artist--xam .artist__content {
+    background-image: url('img/xam.jpg');
 }
