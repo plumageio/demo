@@ -50,6 +50,24 @@ h1, h2, h3, h4, h5 {
 
     .header .row {
         padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+.avatar {
+    display: flex;
+    align-items: center;
+    color: var(--brand-grey);
+    font-size: .9rem;
+}
+
+    .avatar img {
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        border: .15rem solid var(--brand-grey);
+        margin-left: .5rem;
     }
 
 .screens {
