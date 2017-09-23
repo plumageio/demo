@@ -50,11 +50,11 @@ h1, h2, h3, h4, h5 {
 
 .screen {
     flex: 0 0 100%;
-    padding-top: 3.5rem;
+    padding-top: 4.5rem;
 }
 
 .row {
-    max-width: 50rem;
+    max-width: 55rem;
     margin: auto;
     padding: 3rem 1rem;
 }
