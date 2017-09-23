@@ -5,6 +5,10 @@
     --brand-grey: #8E9E9D;
 }
 
+* {
+    box-sizing: border-box
+}
+
 html,
 body {
     margin: 0;
@@ -32,9 +36,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .header {
-    border-bottom: .15rem solid var(--brand-green);
+    border-bottom: .15rem solid var(--brand-grey);
     color: var(--brand-dark);
     position: fixed;
+    z-index: 1;
     width: 100%;
     background: #fff;
 }
@@ -51,6 +56,7 @@ h1, h2, h3, h4, h5 {
 .screen {
     flex: 0 0 100%;
     padding-top: 4.5rem;
+    transition: .15s ease-out;
 }
 
 .row {
@@ -66,8 +72,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .grid__col {
-    flex: 0 0 47%;
-    margin-bottom: 2%;
+    flex: 0 0 48%;
+    margin-bottom: 4%;
 }
 
     .grid--artists .grid__col {
@@ -78,11 +84,11 @@ h1, h2, h3, h4, h5 {
 @media (min-width: 600px) {
     .grid__col {
         flex: 0 0 32%;
+        margin-bottom: 2%;
     }
 
     .grid--artists .grid__col {
         flex: 0 0 47%;
-        margin-bottom: 6%;
     }
 }
 
@@ -107,9 +113,10 @@ h1, h2, h3, h4, h5 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    padding-top: 10rem;
+    padding-top: 8rem;
     outline: 4px solid transparent;
     display: flex;
+    height: 100%;
 }
 
     .tile.active {
@@ -117,13 +124,13 @@ h1, h2, h3, h4, h5 {
         outline-color: var(--brand-purple);
     }
 
-.tile--blackwork { background-image: url('img/blackwork.png'); }
+.tile--blackwork { background-image: url('img/blackwork.jpg'); }
 .tile--graphic { background-image: url('img/graphic.jpg'); }
 .tile--traditional { background-image: url('img/traditional.jpg'); }
 .tile--neotraditional { background-image: url('img/neotraditional.jpg'); }
 .tile--realistic { background-image: url('img/realistic.png'); }
 .tile--oriental { background-image: url('img/oriental.jpg'); }
-.tile--polynesian { background-image: url(''); }
+.tile--polynesian { background-image: url('img/polynesian.png'); }
 .tile--watercolor { background-image: url('img/watercolor.png'); }
 
 .tile--berlin { background-image: url('img/berlin.jpg'); }
@@ -179,7 +186,17 @@ h1, h2, h3, h4, h5 {
     color: var(--brand-green);
     font-weight: 500;
     text-transform: uppercase;
-    background-color: transparent
+    background-color: transparent;
+    transition: .15s ease-out;
+}
+
+.button:hover {
+    opacity: .7;
+}
+
+.button:active {
+    transition: none;
+    opacity: 1;
 }
 
 .artist {
