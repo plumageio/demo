@@ -1,0 +1,66 @@
+:root {
+    --brand-purple: #9d58e2;
+    --brand-green: #00CE96;
+    --brand-dark: #112B20;
+    --brand-grey: #8E9E9D;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Avenir Next', 'sans-serif';
+    color: var(--brand-grey);
+}
+
+a {
+    color: var(--brand-green);
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--brand-dark);
+}
+
+.screens {
+    display: flex;
+    overflow-x: hidden;
+}
+
+.screen {
+    flex: 0 0 100%;
+}
+
+.row {
+    max-width: 40rem;
+    margin: auto;
+    padding: 3rem 1rem;
+}
+
+.grid {
+
+}
+
+.header {
+    margin-bottom: 3rem;
+}
+
+.title {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: .5rem;
+    margin-bottom: 0;
+    color: var(--brand-grey);
+}
